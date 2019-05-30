@@ -1,4 +1,4 @@
-package org.cvc.rf.services;
+package br.com.cvc.rf.services;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
