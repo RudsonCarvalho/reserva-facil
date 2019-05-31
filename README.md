@@ -16,9 +16,9 @@ Coloquei um interceptador de erros na api para tratar todos os erros retornados 
     - Repository onde estão todos os componentes e objetos de persistencia. (aqui utilizo inversão de dependencia com o dominio, para que os objetos de repository não entre no Domain, mesmo conceito pode ser aplicado a integrações com LDAP, e outros servicos fora do dominio)
 
 - Padrões de código:   
-  (andamento)
+	(andamento)
 - Test Unitário:
-  (andamento)
+	(andamento)
     
 
 
