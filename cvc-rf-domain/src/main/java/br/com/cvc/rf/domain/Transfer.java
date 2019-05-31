@@ -1,6 +1,6 @@
 package br.com.cvc.rf.domain;
 
-public class Transferencia {
+public class Transfer {
 
 	private String uuid;
 

@@ -4,7 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.cvc.rf.domain.Account;
+import br.com.cvc.rf.api.dto.AccountDTO;
+import br.com.cvc.rf.api.mapper.AccountMapper;
 import br.com.cvc.rf.service.AccountService;
 
 @RestController
@@ -13,9 +14,12 @@ public class AccountController {
 	@Autowired
 	private AccountService accountService;
 	
+	@Autowired
+	private AccountMapper mapper;
+	
 	@GetMapping("/account")
-	Account get() {
-		return accountService.getAccount();
+	AccountDTO get() {
+		return mapper.parser(accountService.getAccount());
 	}
 	
 }
