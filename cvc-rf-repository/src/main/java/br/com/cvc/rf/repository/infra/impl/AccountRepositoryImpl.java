@@ -1,29 +1,53 @@
 package br.com.cvc.rf.repository.infra.impl;
 
+import java.util.Optional;
+
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 import br.com.cvc.rf.domain.Account;
+import br.com.cvc.rf.repository.AccountEntityRepository;
+import br.com.cvc.rf.repository.entity.AccountEntity;
 import br.com.cvc.rf.service.infra.AccountRepository;
 
-@Repository
+@Component
 public class AccountRepositoryImpl implements AccountRepository {
 
+	public AccountRepositoryImpl(AccountEntityRepository accountEntityRepository) {
+		this.repository = accountEntityRepository;
+	}
+
+	private AccountEntityRepository repository;
+
 	@Override
-	public Account save(Account account) {
-		// TODO Auto-generated method stub
-		return null;
+	public Optional<Account> save(Account account) {		
+		return parser(Optional.ofNullable(repository.save(parser(account))));
 	}
 
 	@Override
-	public Account load(Account account) {
+	public Optional<Account> load(Account account) {
 		// TODO Auto-generated method stub
-		return null;
+		return parser(repository.findById(1L));
 	}
 
 	@Override
 	public void delete(Account account) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
+	public AccountEntity parser(Account account) {
+		return new AccountEntity(account.getId(), account.getName(), account.getEmail(), account.getPassword());
+	}
+
+	public Optional<Account> parser(Optional<AccountEntity> accountEntity) {
+
+		if (accountEntity.isPresent()) {
+			AccountEntity a = accountEntity.get();
+			return Optional.of(new Account(a.getId(), a.getName(), a.getEmail(), a.getPassword()));
+		} else {
+			return Optional.empty();
+		}
+
+	}
 }

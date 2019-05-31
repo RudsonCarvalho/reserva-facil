@@ -4,8 +4,11 @@ import br.com.cvc.rf.domain.Account;
 
 public class AccountDTO {
 
-	public AccountDTO(Account account) {
+	public AccountDTO() {
+		
+	}
 	
+	public AccountDTO(Account account) {	
 		this.name = account.getName();
 		this.email = account.getEmail();
 	}
@@ -13,6 +16,8 @@ public class AccountDTO {
 	private String name;
 	
 	private String email;
+	
+	private String password;
 
 	public String getName() {
 		return name;
@@ -29,7 +34,13 @@ public class AccountDTO {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
-	
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
 }

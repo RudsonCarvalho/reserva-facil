@@ -10,16 +10,21 @@ import lombok.Data;
 @Entity
 public class AccountEntity {
 
-	public AccountEntity(String name, String password, String email) {
-		this.name = name;
-		this.password = password;
+	public AccountEntity() {
+		
+	}
+	
+	public AccountEntity(Long id, String name, String email, String password) {
+		this.id = id;
+		this.name = name;		
 		this.email = email;
+		this.password = password;
 	}
 
 	private @Id @GeneratedValue Long id;
 
-	private String name;
-	private String password;
+	private String name;	
 	private String email;
+	private String password;
 
 }

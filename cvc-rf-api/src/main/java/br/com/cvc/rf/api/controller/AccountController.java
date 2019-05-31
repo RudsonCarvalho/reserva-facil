@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.cvc.rf.api.dto.AccountDTO;
 import br.com.cvc.rf.api.mapper.AccountMapper;
+import br.com.cvc.rf.domain.Account;
 import br.com.cvc.rf.service.AccountService;
 
 @RestController
@@ -24,9 +25,9 @@ public class AccountController {
 	@GetMapping("/account")
 	ResponseEntity<AccountDTO> get() {
 
-		AccountDTO accountDTO = null;
+		AccountDTO accountDTO = new AccountDTO();
 
-		accountDTO = mapper.parser(accountService.getAccount());
+		accountDTO = mapper.parser(accountService.getAccount(mapper.parser(accountDTO)));
 
 		return new ResponseEntity<>(accountDTO, HttpStatus.OK);
 	}

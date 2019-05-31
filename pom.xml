@@ -35,8 +35,8 @@
 	</dependencies>
 
 	<modules>
+		<module>cvc-rf-repository</module>
 		<module>cvc-rf-domain</module>
-		<module>cvc-rf-api</module>
-    <module>cvc-rf-repository</module>
+		<module>cvc-rf-api</module>    	
   </modules>
 </project>

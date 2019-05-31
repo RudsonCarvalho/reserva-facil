@@ -15,7 +15,7 @@ public class AccountMapper {
 
 	public Account parser(AccountDTO accountDTO) {
 
-		Account account = new Account();
+		Account account = new Account(accountDTO.getName(), accountDTO.getEmail(), accountDTO.getPassword());
 
 		return account;
 	}

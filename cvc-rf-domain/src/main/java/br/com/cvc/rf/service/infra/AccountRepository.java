@@ -1,12 +1,14 @@
 package br.com.cvc.rf.service.infra;
 
+import java.util.Optional;
+
 import br.com.cvc.rf.domain.Account;
 
 public interface AccountRepository {
 
-	Account save(Account account);
+	Optional<Account> save(Account account);
 	
-	Account load(Account account);
+	Optional<Account> load(Account account);
 	
 	void delete(Account account);
 }
