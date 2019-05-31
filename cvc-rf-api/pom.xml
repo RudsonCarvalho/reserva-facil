@@ -4,19 +4,17 @@
 	xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
-
+	
 	<parent>
 		<groupId>br.com.cvc.rf</groupId>
 		<artifactId>cvc-rf</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-
-
-	<version>1.0.1-SNAPSHOT</version>
+	
+	<version>1.0.1-SNAPSHOT</version>	
+	<artifactId>cvc-rf-api</artifactId>
+	<name>cvc-rf-api</name>
 	<packaging>jar</packaging>
-
-	<artifactId>cvc-rf-services</artifactId>
-	<name>cvc-rf-services</name>
 
 	<url>http://maven.apache.org</url>
 
@@ -30,12 +28,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-hateoas</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>br.com.cvc.rf</groupId>
 			<artifactId>cvc-rf-domain</artifactId>
@@ -44,7 +42,7 @@
 
 		<dependency>
 			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>			
+			<artifactId>junit</artifactId>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
@@ -57,5 +55,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>

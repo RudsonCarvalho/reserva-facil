@@ -1,7 +1,8 @@
-package br.com.cvc.rf.services;
+package br.com.cvc.rf.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 
 @SpringBootApplication(scanBasePackages = "br.com.cvc.rf")
 public class Application {
