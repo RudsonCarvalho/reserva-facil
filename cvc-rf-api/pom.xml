@@ -4,14 +4,14 @@
 	xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
-	
+
 	<parent>
 		<groupId>br.com.cvc.rf</groupId>
 		<artifactId>cvc-rf</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	
-	<version>1.0.1-SNAPSHOT</version>	
+
+	<version>1.0.1-SNAPSHOT</version>
 	<artifactId>cvc-rf-api</artifactId>
 	<name>cvc-rf-api</name>
 	<packaging>jar</packaging>
@@ -39,6 +39,7 @@
 			<artifactId>cvc-rf-domain</artifactId>
 			<version>1.0.1-SNAPSHOT</version>
 		</dependency>
+
 
 		<dependency>
 			<groupId>junit</groupId>
