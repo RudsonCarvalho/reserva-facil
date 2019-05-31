@@ -1,4 +1,6 @@
-# reserva-facil (go to branch develop)
+# reserva-facil
+
+*Precisa installar o Lombok para poder mapear os imports no Eclipse.
 
 Utilizo o Spring porque é um framework comum de mercado,fácil de configurar, para apoiar na injeção de dependencia e inversão de controle, e o spring boot para empacotar tudo num jar e rodar a aplicação.
 
@@ -9,20 +11,21 @@ Coloquei um interceptador de erros na api para tratar todos os erros retornados 
 
 - @Slf4j - Lombok para os logs porque é prático de usar. (Em eclipse mais velho requer a instalação do lombok)
 
-- Arquitetura
-  Separado em módulos:
-    - Domain onde estão todos os componentes e objetos de negócio. (para manter o domain limpo, não permito que objetos do front/api rest entre neste módulo, tentando manter o conceito de DDD)
-    - Api onde estão todos os componentes e objetos disponibilizados na api-rest (entry point para o front-end) controllers, DTOs, mappers. (no DTO não coloquei lombok para facilitar a manipulação de dados de front-end)
-    - Repository onde estão todos os componentes e objetos de persistencia. (aqui utilizo inversão de dependencia com o dominio, para que os objetos de repository não entre no Domain, mesmo conceito pode ser aplicado a integrações com LDAP, e outros servicos fora do dominio)
+- Arquitetura (Tentei seguir as boas práticas arquiteturais conforme Martin Fowler DDD, Single Responsability, Inversao de controle/dependencia, Injecao de dependencia, Interaface Segregation)
 
-- @Data - Lombok para criar os getters e setters na entidade. (Em eclipse mais velho requer a instalação do lombok)
+  Separada em módulos:
+    - "Domain" onde estão todos os componentes e objetos de negócio. (para manter o domain limpo, não permito que objetos do front/api rest entre neste módulo, tentando manter o conceito de DDD)
+    - "Api" onde estão todos os componentes e objetos disponibilizados na api-rest (entry point para o front-end) controllers, DTOs, mappers.
+    - "Repository" onde estão todos os componentes e objetos de persistencia. (aqui utilizo Inversão de Controle para injetar o repositorio no módulo de domínio, para que os objetos de repository não entre no Domain, mesmo conceito pode ser aplicado a integrações com LDAP, e outros servicos fora do dominio)
+  
 
-- Padrões de código:   
-	(andamento)
-	
-	
-- Test Unitário:
-	(andamento)
+- Padrões de código: TODO  
+  
+- Test Unitário: TODO
+  
+ - Front End: TODO
+ 
+
     
 
 
