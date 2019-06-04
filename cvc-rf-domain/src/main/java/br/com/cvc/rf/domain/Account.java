@@ -1,5 +1,7 @@
 package br.com.cvc.rf.domain;
 
+import java.util.List;
+
 public class Account {
 
 	public Account(String name, String email, String password) {
@@ -22,6 +24,24 @@ public class Account {
 	private String email;
 	
 	private String password;
+	
+	private long number;
+	
+	private double balance;
+	
+	private List<Transfer> transfers;
+
+	public long getNumber() {
+		return number;
+	}
+
+	public void setNumber(long number) {
+		this.number = number;
+	}
+
+	public double getBalance() {		
+		return balance;
+	}
 
 	public String getName() {
 		return name;
@@ -55,5 +75,21 @@ public class Account {
 		this.password = password;
 	}
 	
+	public void deposit(double amount) {
+	    balance += amount;
+	}
+
+
+	public void withdraw(double amount) {
+	    balance -= amount;
+	}
+
+	public List<Transfer> getTransfers() {
+		return transfers;
+	}
+
+	public void setTransfers(List<Transfer> transfers) {
+		this.transfers = transfers;
+	}
 	
 }
