@@ -12,7 +12,7 @@ public interface TransferTax {
 	}
 	
 	static TransferTax untilTenDays() {
-		return transfer -> Util.days(transfer.getScheduleDate(), transfer.getExecutionDate()) * 12;
+		return transfer -> Util.days(transfer.getScheduleDate(), transfer.getCreateDate()) * 12;
 	}
 	
 	static TransferTax upToTwentyDays() {
