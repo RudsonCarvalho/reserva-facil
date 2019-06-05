@@ -41,6 +41,7 @@
 	</dependencies>
 
 	<modules>
+		<module>cvc-rf-batch</module>
 		<module>cvc-rf-repository</module>
 		<module>cvc-rf-domain</module>
 		<module>cvc-rf-api</module>    	

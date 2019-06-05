@@ -1,7 +1,7 @@
 package br.com.cvc.rf.domain.tax;
 
 import br.com.cvc.rf.domain.Transfer;
-import br.com.cvc.rf.service.util.Util;
+import br.com.cvc.rf.domain.util.Util;
 
 public interface TransferTax {
 

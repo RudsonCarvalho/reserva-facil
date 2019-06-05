@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import br.com.cvc.rf.api.dto.AccountDTO;
 import br.com.cvc.rf.api.mapper.AccountMapper;
 import br.com.cvc.rf.domain.Account;
-import br.com.cvc.rf.service.AccountService;
+import br.com.cvc.rf.domain.service.AccountService;
 
 @RestController
 @RequestMapping("/accounts")

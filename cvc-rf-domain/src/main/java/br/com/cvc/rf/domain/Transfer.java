@@ -3,10 +3,23 @@ package br.com.cvc.rf.domain;
 import java.util.Calendar;
 import java.util.Date;
 
-import br.com.cvc.rf.enums.Status;
-import br.com.cvc.rf.service.util.Util;
+import br.com.cvc.rf.domain.enums.Status;
+import br.com.cvc.rf.domain.util.Util;
 
 public class Transfer {
+	
+	public Transfer() {
+		
+	}
+	
+	public Transfer(Account from, Account to, Double amount, Date scheduleDate) {
+		this.from = from;
+		this.to = to;
+		this.amount = amount;
+		this.scheduleDate = scheduleDate;
+		this.createDate = Calendar.getInstance().getTime();
+		this.uuid = Util.uuid();
+	}
 
 	private Long id;
 	
@@ -28,15 +41,6 @@ public class Transfer {
 	
 	private Status status;
 		
-	public Transfer(Account from, Account to, Double amount, Date scheduleDate) {
-		this.from = from;
-		this.to = to;
-		this.amount = amount;
-		this.scheduleDate = scheduleDate;
-		this.createDate = Calendar.getInstance().getTime();
-		this.uuid = Util.uuid();
-	}
-
 	public String getUuid() {
 		return uuid;
 	}

@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-import br.com.cvc.rf.service.validation.exception.AccountNotFoundException;
-import br.com.cvc.rf.service.validation.exception.InvalidObjectException;
+import br.com.cvc.rf.domain.validation.exception.AccountNotFoundException;
+import br.com.cvc.rf.domain.validation.exception.InvalidObjectException;
 import lombok.extern.slf4j.Slf4j;
 
 @ControllerAdvice

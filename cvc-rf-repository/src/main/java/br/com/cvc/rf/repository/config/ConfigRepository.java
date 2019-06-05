@@ -16,10 +16,6 @@ import lombok.extern.slf4j.Slf4j;
 @EntityScan("br.com.cvc.rf.repository.entity")
 public class ConfigRepository {
 
-	public ConfigRepository() {
-		log.info("contruiiiiiiiiiiifakdfjasdlfjdskj");
-	}
-	
 	@Bean
 	CommandLineRunner initDatabase(AccountEntityRepository repository) {
 		return args -> {
@@ -30,7 +26,4 @@ public class ConfigRepository {
 		};
 	}
 	
-	
-	
-
 }
