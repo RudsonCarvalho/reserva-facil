@@ -2,9 +2,9 @@
 
 *Precisa instalar o Lombok no Eclipse.
 
-Utilizo o Spring porque é um framework comum de mercado,fácil de configurar, para apoiar na injeção de dependencia e inversão de controle, e o spring boot para empacotar tudo num jar e rodar a aplicação.
+Utilizo o Spring porque é um framework comum de mercado, fácil de configurar, para apoiar na injeção de dependencia e inversão de controle, e o spring boot para empacotar tudo num jar e rodar a aplicação de maneira simples.
 
-- Java 1.8 porque atualmente é o mais utilizado e tenho as funcionalidades de lambdas, streams, functions, optional etc..., que já atendem bem o objetivo
+- Java 1.8 porque atualmente é bem utilizado e tenho as funcionalidades de lambdas, streams, functions, optional etc..., que já atendem bem o objetivo.
 
 - Tratamento de erros da API @ControllerAdvice
 Coloquei um interceptador de erros na api para tratar todos os erros retornados para o front. (em toda a aplicação disparo runtime exceptions que são interceptadas e tratadas antes de retornar para o front)
@@ -27,8 +27,7 @@ Coloquei um interceptador de erros na api para tratar todos os erros retornados 
 - Test Unitário: 
 	Implementei um teste unitário na classe responsável pelo cálculo de taxas "br.com.cvc.rf.domain.tax.TransferTaxTest"
   
- - Front End: TODO
- 	Ainda não sei o que vou usar... 
+ - Front End: TODO (Ainda não sei o que vou usar...)
 
     
 
