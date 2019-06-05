@@ -11,7 +11,7 @@ Coloquei um interceptador de erros na api para tratar todos os erros retornados 
 
 - @Slf4j - Lombok para os logs porque é prático de usar.
 
-- Arquitetura (Tentei seguir as boas práticas arquiteturais conforme Martin Fowler DDD, Single Responsability, Inversao de controle/dependencia, Injecao de dependencia, Interaface Segregation)
+- Arquitetura (Tentei seguir as boas práticas arquiteturais conforme Martin Fowler, DDD, Single Responsability, Inversao de controle/dependencia, Injecao de dependencia, Interaface Segregation - SOLID...)
 
   Separada em módulos:
     - "Domain" onde estão todos os componentes e objetos de negócio. (para manter o domain limpo, não permito que objetos do front/api rest entre neste módulo, tentando manter o conceito de DDD)
