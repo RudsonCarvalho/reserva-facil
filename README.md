@@ -21,6 +21,7 @@ Coloquei um interceptador de erros na api para tratar todos os erros retornados 
 
 - Padrões de código:
 	  Ao invés de implementar classes concretas e estratégias para o cálculo de taxas, fiz uso do Java 8 e lambda expression colocando tudo numa única classe simples TransferTax.
+	  
 	  O valor data transferência (amount) é para ser BigDecimal, mas, para facilitar a implementação fase 1 estou indo de double mesmo...
   
 - Test Unitário: 
