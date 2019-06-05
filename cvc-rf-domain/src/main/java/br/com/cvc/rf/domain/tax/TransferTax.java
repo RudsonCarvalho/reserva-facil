@@ -12,7 +12,7 @@ public interface TransferTax {
 	}
 	
 	static TransferTax untilTenDays() {
-		return transfer -> Util.days(transfer.getScheduleDate(), transfer.getCreateDate()) * 12;
+		return transfer -> Util.days(transfer.getCreateDate(), transfer.getScheduleDate()) * 12;
 	}
 	
 	static TransferTax upToTwentyDays() {
@@ -28,6 +28,6 @@ public interface TransferTax {
 	}
 	
 	static TransferTax overFortyDays() {
-		return transfer -> transfer.getAmount() > 100.000 ? transfer.getAmount() * 0.02 : 0d;
+		return transfer -> transfer.getAmount() > 100000.00 ? transfer.getAmount() * 0.02 : 0d;
 	}
 }
