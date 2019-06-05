@@ -22,7 +22,7 @@ public class AccountController {
 	@Autowired
 	private AccountMapper mapper;
 
-	@GetMapping("/account")
+	@GetMapping("/v1/account")
 	ResponseEntity<AccountDTO> get() {
 
 		AccountDTO accountDTO = new AccountDTO();
