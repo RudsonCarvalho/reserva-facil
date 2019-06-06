@@ -20,9 +20,9 @@ public class ConfigRepository {
 	CommandLineRunner initDatabase(AccountEntityRepository repository) {
 		return args -> {
 			log.info("loading default users "
-					+ repository.save(new AccountEntity(null, "Luan Santana", "luan@juntos.com.br", "juntos")));
+					+ repository.save(new AccountEntity(null, "Luan Santana", "luan@juntos.com.br", "juntos", 1, 10.0)));
 			log.info("loading default users  " + repository
-					.save(new AccountEntity(null, "Paula Fernandes", "paula@shallownow.com.br", "shallow now")));
+					.save(new AccountEntity(null, "Paula Fernandes", "paula@shallownow.com.br", "shallow now", 2, 50.0)));
 		};
 	}
 	

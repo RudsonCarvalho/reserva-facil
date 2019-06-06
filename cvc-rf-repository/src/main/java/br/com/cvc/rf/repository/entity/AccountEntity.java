@@ -14,11 +14,13 @@ public class AccountEntity {
 		
 	}
 	
-	public AccountEntity(Long id, String name, String email, String password) {
+	public AccountEntity(Long id, String name, String email, String password, long number, double balance) {
 		this.id = id;
 		this.name = name;		
 		this.email = email;
 		this.password = password;
+		this.number = number;
+		this.balance = balance;
 	}
 
 	private @Id @GeneratedValue Long id;

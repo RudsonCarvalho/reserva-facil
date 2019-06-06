@@ -28,7 +28,7 @@ public class AccountRepositoryImpl implements AccountRepository {
 	@Override
 	public Optional<Account> load(Account account) {
 		// TODO Auto-generated method stub
-		return parser(repository.findById(1L));
+		return parser(repository.findById(account.getId()));
 	}
 
 	@Override
@@ -49,14 +49,14 @@ public class AccountRepositoryImpl implements AccountRepository {
 	}
 
 	public AccountEntity parser(Account account) {
-		return new AccountEntity(account.getId(), account.getName(), account.getEmail(), account.getPassword());
+		return new AccountEntity(account.getId(), account.getName(), account.getEmail(), account.getPassword(), account.getNumber(), account.getBalance());
 	}
 
 	public Optional<Account> parser(Optional<AccountEntity> accountEntity) {
 
 		if (accountEntity.isPresent()) {
 			AccountEntity a = accountEntity.get();
-			return Optional.of(new Account(a.getId(), a.getName(), a.getEmail(), a.getPassword()));
+			return Optional.of(new Account(a.getId(), a.getName(), a.getEmail(), a.getPassword(), a.getNumber(), a.getBalance()));
 		} else {
 			return Optional.empty();
 		}

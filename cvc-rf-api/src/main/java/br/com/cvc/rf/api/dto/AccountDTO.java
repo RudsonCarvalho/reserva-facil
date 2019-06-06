@@ -1,5 +1,6 @@
 package br.com.cvc.rf.api.dto;
 
+import br.com.cvc.rf.api.util.Util;
 import br.com.cvc.rf.domain.Account;
 
 public class AccountDTO {
@@ -11,6 +12,9 @@ public class AccountDTO {
 	public AccountDTO(Account account) {	
 		this.name = account.getName();
 		this.email = account.getEmail();
+		this.balance = Util.formatBalance(account.getBalance());
+		this.number = Util.formatAccountNumber(account.getNumber());
+		this.password = "";
 	}
 	
 	private String name;
@@ -19,7 +23,7 @@ public class AccountDTO {
 	
 	private String password;
 	
-	private long number;
+	private String number;
 	
 	private String balance;
 
@@ -55,11 +59,11 @@ public class AccountDTO {
 		this.password = password;
 	}
 
-	public long getNumber() {
+	public String getNumber() {
 		return number;
 	}
 
-	public void setNumber(long number) {
+	public void setNumber(String number) {
 		this.number = number;
 	}
 

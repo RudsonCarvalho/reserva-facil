@@ -40,13 +40,19 @@
 			<artifactId>cvc-rf-repository</artifactId>
 			<version>1.0.1-SNAPSHOT</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>br.com.cvc.rf</groupId>
 			<artifactId>cvc-rf-batch</artifactId>
 			<version>1.0.1-SNAPSHOT</version>
 		</dependency>
-		
+
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+		</dependency>
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
