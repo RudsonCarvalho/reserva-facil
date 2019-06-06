@@ -4,6 +4,10 @@ import java.util.List;
 
 public class Account {
 
+	public Account(Long id) {
+		this.id = id;
+	}
+	
 	public Account(String name, String email, String password) {
 		this.name = name;
 		this.email = email;
@@ -15,6 +19,15 @@ public class Account {
 		this.name = name;
 		this.email = email;
 		this.password = password;
+	}
+	
+	public Account(Long id, String name, String email, String password, long number, double balance) {
+		this.id = id;
+		this.name = name;
+		this.email = email;
+		this.password = password;
+		this.number = number;
+		this.balance = balance;
 	}
 	
 	private Long id;

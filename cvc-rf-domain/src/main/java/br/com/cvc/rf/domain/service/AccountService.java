@@ -1,5 +1,6 @@
 package br.com.cvc.rf.domain.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +27,11 @@ public class AccountService {
 			throw new AccountNotFoundException("Account not found");
 		}
 
+	}
+	
+	
+	public List<Account> getAccounts() throws AccountNotFoundException {
+		return accountRepository.findAll();
 	}
 
 }

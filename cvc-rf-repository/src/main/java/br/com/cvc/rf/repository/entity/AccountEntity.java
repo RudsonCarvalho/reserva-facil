@@ -26,5 +26,7 @@ public class AccountEntity {
 	private String name;	
 	private String email;
 	private String password;
+	private long number;
+	private double balance;
 
 }

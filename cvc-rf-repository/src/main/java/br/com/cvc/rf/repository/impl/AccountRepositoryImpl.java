@@ -1,6 +1,8 @@
 package br.com.cvc.rf.repository.impl;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Component;
 
@@ -19,7 +21,7 @@ public class AccountRepositoryImpl implements AccountRepository {
 	private AccountEntityRepository repository;
 
 	@Override
-	public Optional<Account> save(Account account) {		
+	public Optional<Account> save(Account account) {
 		return parser(Optional.ofNullable(repository.save(parser(account))));
 	}
 
@@ -30,9 +32,20 @@ public class AccountRepositoryImpl implements AccountRepository {
 	}
 
 	@Override
+	public List<Account> findAll() {
+		return repository.findAll().stream()
+				.map(this::parser).collect(Collectors.toList());
+	}
+
+	@Override
 	public void delete(Account account) {
 		// TODO Auto-generated method stub
 
+	}
+
+	public Account parser(AccountEntity accountEntity) {
+		return new Account(accountEntity.getId(), accountEntity.getName(), accountEntity.getEmail(),
+				accountEntity.getPassword(), accountEntity.getNumber(), accountEntity.getBalance());
 	}
 
 	public AccountEntity parser(Account account) {
@@ -49,4 +62,5 @@ public class AccountRepositoryImpl implements AccountRepository {
 		}
 
 	}
+
 }

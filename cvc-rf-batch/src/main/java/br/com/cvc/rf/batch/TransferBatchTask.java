@@ -19,5 +19,7 @@ public class TransferBatchTask {
 	public void transferManager() {
 		
 		log.info("Reserva facil, monitor de transferencias em execucao...");
+		
+		
 	}
 }
