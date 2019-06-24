@@ -15,8 +15,8 @@ public class TransferService {
 	
 	public Transfer schedule(Transfer transfer) {
 		
-		
-		
+		//TODO: implementar
+				
 		transferRepository.save(transfer);
 		
 		return transfer;
